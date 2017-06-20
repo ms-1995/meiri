@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>每日头条</title>
+	<link rel="stylesheet" href="css/home.css">
+	<script src="node_modules/vue/dist/vue.js"></script>
+	<script src="node_modules/vue-resource/dist/vue-resource.js"></script>
+</head>
+<body>
+	<di id="vue">
+		<div class="top">
+			<h3>每日头条</h3>
+		</div>
+		<div class="header">
+			<ul class="nav">
+				<li v-for="(todo, index) in todos1"><p v-on:click="getClass" v-bind:title="index">{{ todo.text }}</p></li>
+			</ul>
+		</div>
+		<div class="content">
+			<a class="block" v-for="todo in todos2" v-on:click="getInfo">
+				<div class="title">{{ todo.title }}</div>
+			</a>
+			<div>
+				<div class="article_title">{{ title }}</div>
+				<div class="article_text" v-html="text"></div>
+			</div>
+		</div>
+	</div>
+	<script src="./home.js"></script>
+</body>
+</html>
