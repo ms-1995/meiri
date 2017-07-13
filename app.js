@@ -3,10 +3,6 @@ var serveStatic = require('serve-static');
 var getData = require('./mongodb/data.js');
 var webCrawler = require('./crawler/webCrawler.js');
 
-var s = setTimeout(function(){
-	webCrawler();
-	setTimeout(s,43200000);
-},43200000);
 
 var app = express();
 
