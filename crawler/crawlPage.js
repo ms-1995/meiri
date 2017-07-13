@@ -41,9 +41,11 @@ var getPage = function(urls, callback){
 			var html = res.text;
 			var $ = cheerio.load(html, {decodeEntities: false});
 			var charset = $('head meta').attr('charset');
-			if(!charset){
+			console.log(charset);
+			// if(!charset){
 				
-			}else{
+			// }else
+			{
 				var title = $('.text-title h1').text();
 				var date = $('.time').text();
 				var text = $('.article').html();
